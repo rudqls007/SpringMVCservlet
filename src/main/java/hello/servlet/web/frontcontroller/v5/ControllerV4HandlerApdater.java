@@ -22,7 +22,7 @@ public class ControllerV4HandlerApdater implements MyHandlerAdapter {
     public ModelView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException, IOException {
         ControllerV4 controller = (ControllerV4) handler;
 
-        Map<String, String> paramMap = createParamMap(request);
+        Map<String, String> paramMap = createParamMap(request)  ;
         HashMap<String, Object> model = new HashMap<>();
 
         String viewName = controller.process(paramMap, model);
